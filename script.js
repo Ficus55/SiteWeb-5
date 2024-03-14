@@ -1,17 +1,27 @@
-// menu
+// mobile menu open
 document.querySelector(".menu_burger").addEventListener("click", () => {
     document.querySelector(".site-header").classList.toggle("open");
     document.body.classList.toggle("disable_scroll");
 });
+
+// mobile menu close
 document.querySelector(".menu_close_body").addEventListener("click", () => {
     document.querySelector(".site-header").classList.toggle("open");
     document.body.classList.toggle("disable_scroll");
 });
 
+// disable scroll when mobile menu is open
 document.querySelector(".menu_list").addEventListener("click", (event) => {
     if (event.target.closest(".menu_link")) {
         document.querySelector(".site-header").classList.toggle("open");
         document.body.classList.remove("disable_scroll");
+    }
+});
+
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("open")) {
+        document.querySelector(".site-header").classList.toggle("open");
+        document.body.classList.toggle("disable_scroll");
     }
 });
 
