@@ -228,7 +228,7 @@ a {
     transform: translateY(0px) rotate(135deg);
 }
 
-.menu_link {
+.menu_list a {
     margin: 0px 0px 0px 25px;
     color: #000;
     font-size: 19px;
@@ -1128,7 +1128,7 @@ cite::before {
         transform: translateY(0);
     }
 
-    .menu_link {
+    .menu_list a {
         display: block;
         padding: 20px;
         margin: 0;
