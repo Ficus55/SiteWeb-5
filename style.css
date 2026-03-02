@@ -140,6 +140,12 @@ a {
     height: 80px;
 }
 
+.menu .icon {
+    width: 28px;
+    height: 28px;
+    fill: grey;
+}
+
 .menu_item {}
 
 .menu_body_logo {
@@ -189,6 +195,71 @@ a {
 .menu_list {
     display: flex;
     align-items: center;
+}
+
+.menu_search {
+    position: absolute;
+    z-index: 28;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f6f0f1;
+    transform: translateY(-110%);
+    overflow: hidden;
+    transition: all .3s cubic-bezier(0, 0, .38, 1);
+}
+
+.search-active .menu_search {
+    transform: translateY(0);
+}
+
+.search-active:before {
+    content: '';
+    position: absolute;
+    z-index: 6;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    opacity: 0.5;
+    transition: all .5s ease;
+}
+
+.site-header__search-form {
+    display: flex;
+    padding: 20px 0;
+}
+
+.site-header__search-input {
+    flex: 1 1 auto;
+    padding: 8px 10px;
+    background: #f6f0f1;
+    font-size: 1.71429em;
+    font-family: Montserrat, sans-serif;
+    width: 100px;
+}
+
+.site-header__search-btn {
+    padding: 0 20px;
+    font-size: 21px;
+    background: #f6f0f1;
+    color: #343333;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav__icon {
+    font-size: 27px;
+    color: grey;
+    padding: 7.5px 12px;
+    background: #f6f0f1;
 }
 
 .menu_close_body {
@@ -1039,15 +1110,37 @@ cite::before {
     margin: 0px 0px 30px 0px;
 }
 
+.legal_section {
+    padding: 100px 0;
+}
 
+.legal_section .container {
+    padding: 0 10px;
+}
 
+.legal_img_block {
+    padding: 64px 16px;
+}
 
+.legal_img_block img {
+    width: 100%;
+}
 
+.section_descr_wrapper p {
+    margin: 16px 0;
+}
 
+.legal_descr_block {
+    margin: 0px 0px 32px 0px;
+}
 
+.text_block_centered {
+    text-align: center;
+}
 
-
-
+.legal_descr_block p span {
+    word-break: break-all;
+}
 
 
 
@@ -1242,6 +1335,16 @@ cite::before {
 }
 
 @media (max-width: 590px) {
+
+    /*-----------------------menu-------------------------*/
+
+    .site-nav__icon {
+        padding: 7.5px;
+    }
+
+    .site-header__search-input {
+        font-size: 1.42857em;
+    }
 
     /*------------------------glide_home-------------------------*/
 
